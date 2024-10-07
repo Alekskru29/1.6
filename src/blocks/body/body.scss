@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: $bg-grey;
+    font-weight: 400;
+    min-width: 320px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }

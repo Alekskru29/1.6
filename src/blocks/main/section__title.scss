@@ -1,0 +1,41 @@
+.section__title {
+    font-family: "TTLakes", sans-serif;
+    font-weight: 400;
+    max-height: 80px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $bg-opacity;
+    padding: 16px 16px;
+    margin-top: 24px;
+    box-sizing: border-box;
+    border-top: 1px solid $border-header;
+    text-transform: uppercase;
+    background: linear-gradient(to right, $bg-grey, $bg-white);
+  
+    @media (min-width: 768px) {
+      margin-top: 32px;
+      padding: 16px 0 16px 24px;
+      max-height: 56px;
+    }
+  
+    @media (min-width: 1366px) {
+      margin-left: 320px;
+  
+      padding-left: 32px;
+      margin-top: 195px;
+  
+  
+    &.section__title--brands {
+      margin-top: 195px;
+    }
+  
+    &.section__title--tech {
+      margin-top: 32px;
+    }
+  
+    &.section__title--prices{
+      margin-top: 32px;
+    }
+   }
+}

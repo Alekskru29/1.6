@@ -1,0 +1,134 @@
+
+.swiper {
+    &-slide,
+    &-wrapper,
+    &-container {
+      height: auto;
+      overflow: visible !important;
+    }
+  }
+  
+  ul {
+    padding-inline-start: 0 !important;
+  }
+  
+  .tech-container {
+    position: relative;
+    margin: 16px 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    &::after {
+      content: "";
+      text-align: right;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  
+  .tech-list {
+    height: 160px;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    margin-bottom: 16px;
+  
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  
+  .tech-item {
+    font-family: "TTLakes", sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background-color: $bg-white;
+    height: 160px !important;
+    box-sizing: border-box;
+    border: 1px solid $border;
+    border-radius: 5px;
+    display: flex !important;
+    cursor: pointer;
+    padding: 16px;
+    width: 240px;
+    position: relative;
+  
+    &:hover img:last-child {
+      transition: transform 0.3s;
+      transform: scale(1.1);
+    }
+  
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+  
+  .tech-btn {
+    margin: auto 0 0 auto;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+  
+    &:hover {
+      transition: transform 0.3s;
+      transform: scale(1.1);
+    }
+  
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .tech-container {
+      position: relative;
+      margin: 24px 24px 24px 24px;
+  
+      &::after {
+        display: none;
+      }
+    }
+  
+    .tech-item {
+      width: 224px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      overflow: hidden;
+    }
+  }
+  
+  @media (min-width: 1366px) {
+    .tech-container {
+      position: relative;
+      margin: 24px 32px 25px 353px;
+    }
+  
+    .tech-list {
+      gap: 32px;
+    }
+  
+    .tech-item {
+      width: 240px;
+      display: flex;
+    }
+  
+    .tech-container .read-more__icon {
+      margin-left: 0px;
+    }
+  }
+  
+  
+  
+  
+           
+  

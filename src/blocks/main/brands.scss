@@ -1,0 +1,121 @@
+.brands {
+  position: relative;
+  padding-bottom: 24px;
+  margin: 15px 0 -5px 16px !important;;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  @media (min-width: 768px) {
+    margin: 8px 24px 8px 24px !important;;
+    padding-bottom: 2px;
+  }
+
+  @media (min-width: 1366px) {
+      margin: 8px 32px 0 32px !important;;
+      max-height: 224px;
+      list-style: none;
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &-list {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      left: 40px;
+    }
+
+    @media (min-width: 1366px) {
+      gap: 16px 32px;
+      margin-left: 320px;
+      height: 100%;
+      overflow: visible;
+    }
+  }
+
+  &__item {
+    &:hover __item {
+      transition: transform 0.3s;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    @media (min-width: 768px) {
+      width: 224px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 1366px) {
+      width: 240px;
+      display: flex;
+    }
+  }
+}
+
+.read-more {
+  font-family: "TTLakes", sans-serif;
+  font-weight: 600;
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: $btn-black;
+  align-items: center;
+  margin: 8px 0 0 0;
+  cursor: pointer;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-flex;
+    align-items: center;
+    
+    &__icon {
+      width: 24px;
+      height: 24px;
+      background: url('../images/expand.png');
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &__text {
+      display: inline-block;
+    }
+  }
+
+    @media (min-width: 1366px) {
+      display: inline-flex;
+      align-items: center;
+
+      &__icon {
+        width: 24px;
+        height: 24px;
+        background: url('../images/expand.png');
+        margin-right: 8px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 320px;
+      }
+      
+      &__text {
+        display: inline-block;
+        position: static;
+      }
+  }
+}
+
+
+

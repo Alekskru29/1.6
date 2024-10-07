@@ -1,0 +1,220 @@
+
+.prices-section {
+    position: relative;
+    padding-bottom: 24px;
+    margin: 15px 0 0 8px;
+    font-family: "TTLakes", sans-serif;
+    font-weight: 400;
+  
+    &__header {
+      display: none;
+    }
+  
+    &__service-name {
+      width: 228px;
+  
+      &::before {
+        display: block;
+        margin-bottom: 3px;
+        color: $bg-opacity;
+        content: 'Ремонтные услуги';
+      }
+    }
+  
+    .prices-list {
+      height: 200px !important;
+      list-style: none;
+      padding: 0;
+  
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+  
+      &__item {
+        position: relative;
+        background-color: $bg-white;
+        height: 200px !important;
+        box-sizing: border-box;
+        border-radius: 5px;
+        display: flex !important;
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+      }
+  
+      &__service-cost {
+        &::before {
+          display: block;
+          margin-bottom: 2px;
+          color: $bg-opacity;
+          content: 'Цена';
+        }
+      }
+  
+      &__service-duration {
+        &::before {
+          display: block;
+          margin-bottom: 2px;
+          color: $bg-opacity;
+          content: 'Срок';
+        }
+      }
+  
+      &__order-btn {
+        padding-left: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        font-weight: 700;
+        color: $bg-white;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        border: none;
+        background-color: $btn-pink;
+        width: 119px;
+        height: 32px;
+        border-radius: 16px;
+        background-image: url('../images/goside.png');
+        background-repeat: no-repeat;
+        background-position: center right 8px;
+        cursor: pointer;
+  
+  
+        &:hover {
+          transition: transform 0.3s;
+          transform: scale(1.1);
+        }
+  
+        &:active {
+          transform: scale(0.97);
+        }
+    }
+  }
+  }
+  
+  @media (min-width: 768px) {
+    .prices-section {
+      padding: 0;
+      margin: 0 24px 0 24px !important;
+  
+      &::after {
+        display: none;
+      }
+  
+      &__header {
+        gap: 16px;
+        color: $bg-opacity;
+        display: flex;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        font-size: 14px;
+        height: 64px;
+        padding: 0 16px 10px 16px;
+        box-sizing: border-box;
+  
+        span {
+          line-height: 64px;
+  
+          &::before {
+            display: none;
+          }
+        }
+      }
+  
+      .prices-list {
+        height: 324px !important;
+        margin-top: 0;
+  
+        &__item {
+          flex-direction: row;
+          height: 65px !important;
+          box-sizing: border-box;
+          border-bottom: 1px solid $border-header;
+          padding: 0 16px;
+  
+          &:last-child {
+            border: none;
+          }
+  
+          span {
+            line-height: 64px;
+  
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+  
+      &__service-name {
+        width: 55%;
+      }
+  
+      &__service-cost {
+        width: 10%;
+        text-align: left;
+      }
+  
+      &__service-duration {
+        width: 5%;
+        text-align: left;
+      }
+  
+      .prices-list {
+        &__service-name {
+          width: 55%;
+        }
+  
+        &__service-cost {
+          width: 10%;
+          text-align: left;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 1366px) {
+    .prices-section {
+      margin: 0 32px 0 353px !important;
+  
+      &__header {
+        padding: 8px 23px;
+      }
+  
+      &__service-name {
+        width: 55%;
+      }
+  
+      &__service-cost {
+        width: 20%;
+        text-align: left;
+      }
+  
+      .prices-list {
+        &__service-cost {
+          width: 20%;
+          text-align: left;
+        }
+  
+        &__item {
+          padding: 0 23px;
+        }
+  
+        &__order-btn {
+          right: 24px;
+        }
+      }
+    }
+  }
+  
+  .tech-pagination {
+    bottom: -20px !important;
+  }
