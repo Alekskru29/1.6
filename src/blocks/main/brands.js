@@ -1,9 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-// Селекторы секции брендов
-
-// Селекторы секции брендов
 const brands = document.querySelector(".brands");
 const readMoreBrands = brands?.querySelector(".read-more");
 const brandsList = document.querySelector(".brands-list");
@@ -12,7 +9,6 @@ const readMoreIcon = readMoreBrands?.querySelector(".read-more__icon");
 const readMoreText = readMoreBrands?.querySelector(".read-more__text");
 const pagination = document.querySelectorAll(".swiper-pagination");
 
-// Селекторы секции техники
 const techContainer = document.querySelector(".tech-container");
 const techList = document.querySelector(".tech-list");
 const techItems = document.querySelectorAll(".tech-item");
@@ -20,7 +16,6 @@ const readMoreTech = techContainer.querySelector(".read-more");
 const readMoreTechIcon = readMoreTech?.querySelector(".read-more__icon");
 const readMoreTechText = readMoreTech?.querySelector(".read-more__text");
 
-// Селекторы секции с ценами
 const pricesSection = document.querySelector(".prices-section");
 const pricesSectionHeader = pricesSection?.querySelector(".prices-section__header");
 const pricesList = pricesSection?.querySelector(".prices-list");
@@ -30,9 +25,8 @@ const pricesListServiceCost = pricesSection?.querySelectorAll(".prices-list__ser
 const pricesListServiceDuration = pricesSection?.querySelectorAll(".prices-list__service-duration");
 const pricesListOrderBtn = pricesSection?.querySelectorAll(".prices-list__order-btn");
 
-// Измеряем размер экрана
 const checkScreen = (screenWidth) => {
-  if (screenWidth < 768) { // Условия для мобильной версии
+  if (screenWidth < 768) { 
     if (!brands.classList.contains("swiper-container")) {
       readMoreBrands.style.display = "none";
       brands.classList.add("swiper-container");
@@ -72,9 +66,9 @@ const checkScreen = (screenWidth) => {
         },
       });
     }
-    // Показываем pagination
+    
     pagination.forEach(e => e.style.visibility = "visible");
-  } else if (screenWidth < 1600) { // Условия для средней версии
+  } else if (screenWidth < 1600) { 
     brands.classList.toggle("swiper-container", false);
     techContainer.classList.toggle("swiper-container", false);
     pricesSection.classList.toggle("swiper-container", false);
@@ -87,9 +81,9 @@ const checkScreen = (screenWidth) => {
     techList.style.overflow = "hidden";
     pricesList.style.height = "324px";
     pricesList.style.overflow = "hidden";
-    // Скрываем pagination
+    
     pagination.forEach(e => e.style.visibility = "hidden");
-  } else { // Условия для десктопной версии
+  } else { 
     brands.classList.toggle("swiper-container", false);
     techContainer.classList.toggle("swiper-container", false);
     pricesSection.classList.toggle("swiper-container", false);
@@ -102,7 +96,7 @@ const checkScreen = (screenWidth) => {
     techList.style.overflow = "visible";
     pricesList.style.height = "324px";
     pricesList.style.overflow = "visible";
-    // Скрываем pagination
+    
     pagination.forEach(e => e.style.visibility = "hidden");
   }
 };
