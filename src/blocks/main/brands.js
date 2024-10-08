@@ -68,7 +68,7 @@ const checkScreen = (screenWidth) => {
     }
     
     pagination.forEach(e => e.style.visibility = "visible");
-  } else if (screenWidth < 1600) { 
+  } else if (screenWidth < 2500) { 
     brands.classList.toggle("swiper-container", false);
     techContainer.classList.toggle("swiper-container", false);
     pricesSection.classList.toggle("swiper-container", false);
