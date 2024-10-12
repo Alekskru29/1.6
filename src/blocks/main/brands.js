@@ -49,6 +49,8 @@ const checkScreen = (screenWidth) => {
       const techSwiper = new Swiper('.tech-container', {
         slidesPerView: 1,
         spaceBetween: 16,
+        width: 240,
+        height: 160,
         pagination: {
           el: '.swiper-pagination',
         },
@@ -61,6 +63,8 @@ const checkScreen = (screenWidth) => {
       const pricesSwiper = new Swiper('.prices-section', {
         slidesPerView: 1,
         spaceBetween: 16,
+        width: 260,
+        height: 200,
         pagination: {
           el: '.swiper-pagination',
         },
